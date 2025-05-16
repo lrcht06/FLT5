@@ -1,5 +1,3 @@
----
-
 # Finals Lab Task 5: Using SQL Views, Stored Procedures, and Functions
 This portfolio demonstrates the application of SQL **Views**, **Stored Procedures**, and **Stored Functions** in managing and processing data from a relational database. The task builds upon a predefined inventory system structure and showcases how SQL abstraction can be used for modular and efficient data access.
 
