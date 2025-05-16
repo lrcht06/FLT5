@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finals Lab Task 3-1</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="stars"></div>
+  <div id="twinkling"></div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="assets/ITbgmusic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1 class="clickable">Finals Lab Task 3-1: Using MySQL Clause</h1>
+    <p>This portfolio demonstrates the application of MySQL SELECT Clauses to query and retrieve data from a relational database. The task builds upon a predefined database structure and focuses on extracting meaningful insights using various SELECT statement features.</p>
+
+    <hr />
+
+    <h2 class="clickable">STEP BY STEP PROCESS</h2>
+    <h3>STEP 1</h3>
+    <p>Launch MySQL Workbench or phpMyAdmin and start XAMPP to activate MySQL.</p>
+
+    <h3>STEP 2</h3>
+    <p>Open MySQL Workbench or phpMyAdmin and download/import the onlineCourse.sql file to initialize the tables and data.</p>
+
+    <h3>STEP 3</h3>
+    <ul>
+      <li>Create a database named <code>online_courseDB</code></li>
+      <li>Use the database created</li>
+    </ul>
+
+    <h3>STEP 4</h3>
+    <p>Import the provided initial SQL structure (onlineCourse.sql) into the online_courseDB to load the necessary tables and sample data.</p>
+
+    <h3>STEP 5</h3>
+    <ul>
+      <li><strong>Task 1</strong> – Retrieve all courses where <code>students enrolled</code> is less than the <code>enrollment limit</code></li>
+      <li><strong>Task 2</strong> – Group courses by <code>category</code> and calculate total students</li>
+      <li><strong>Task 3</strong> – Retrieve courses that are fully enrolled</li>
+      <li><strong>Task 4</strong> – Calculate total number of students enrolled across all courses</li>
+      <li><strong>Task 5</strong> – Sort courses by <code>students enrolled</code> in ascending order</li>
+    </ul>
+
+    <hr />
+
+    <h2 class="clickable">Query Statements (Screenshots)</h2>
+    <div class="image-column">
+      <h3>Task 1</h3>
+      <img src="images/FLT3-1(T1).png" alt="Task 1" />
+      <h3>Task 2</h3>
+      <img src="images/FLT3-1(T2).png" alt="Task 2" />
+      <h3>Task 3</h3>
+      <img src="images/FLT3-1(T3).png" alt="Task 3" />
+      <h3>Task 4</h3>
+      <img src="images/FLT3-1(T4).png" alt="Task 4" />
+      <h3>Task 5</h3>
+      <img src="images/FLT3-1(T5).png" alt="Task 5" />
+    </div>
+
+    <hr />
+
+    <h2 class="clickable">Table Structures (Screenshots)</h2>
+    <div class="image-column">
+      <h3>Table 1</h3>
+      <img src="images/FLT3-1(tbl1).png" alt="Table 1" />
+      <h3>Table 2</h3>
+      <img src="images/FLT3-1(tbl2).png" alt="Table 2" />
+      <h3>Table 3</h3>
+      <img src="images/FLT3-1(tbl3).png" alt="Table 3" />
+      <h3>Table 4</h3>
+      <img src="images/FLT3-1(tbl4).png" alt="Table 4" />
+      <h3>Table 5</h3>
+      <img src="images/FLT3-1(tbl5).png" alt="Table 5" />
+    </div>
+
+    <hr />
+
+    <h2 class="clickable">SQL Copy (File)</h2>
+    <p>
+      <a class="file-link" href="files/L.E.%20Turla%20(FLT3-1_Code).sql" download>
+        📂 L.E.Turla (Finals Lab Task 3-1 Code)
+      </a>
+    </p>
+
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const trail = document.createElement("div");
+      trail.className = "cursor-trail";
+      trail.style.left = `${e.pageX}px`;
+      trail.style.top = `${e.pageY}px`;
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 1000);
+    });
+
+    document.querySelectorAll(".clickable").forEach(el => {
+      el.addEventListener("click", () => {
+        el.classList.add("clicked");
+        setTimeout(() => el.classList.remove("clicked"), 300);
+      });
+    });
+  </script>
+</body>
+</html>
